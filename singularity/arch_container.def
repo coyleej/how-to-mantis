@@ -1,0 +1,52 @@
+Bootstrap: library
+From: iifurther/default/archlinux:latest
+
+%post
+    pacman -Syu --noconfirm
+    pacman -Sy --noconfirm cowfortune cmatrix gnugo fortune-mod ltris \
+           asciiquarium curseofwar nethack angband neofetch
+
+%environment
+    export HOWDY='Hi there'
+
+%runscript
+echo ''
+echo '                              "KWp            ;mM*                            '
+echo '                                  Yw        zM`                               '
+echo '                     ,      ,wmmw  "N      ]R  ygmw,      ,                   '
+echo '                     ]N,   #KKKKKKpm#WmmmmmKmyKKKKKKN   .#N              ,,   '
+echo '                     ]KKN  KKKKKKKHKKKKKKKKKKJKKKKKKK  #KKK,,,,,,,,,,,,z^   N '
+echo '                z   j]KKKKW ?KKKM2BKKKKKKKKKKBQMKKRM zKKKKKT*,         /%,,m` '
+echo '                MM  ]]KKKKKKw   9KKKKKKKKKKKKKKK`  zKKKKKKK `,`~    ,^`/      '
+echo '           .,   L#  ]]KKKKKKKKp  TKKKKKKKKKKKKM  ,#KKKKKKKN   \  ,<,  "       '
+echo '           #]  j ]  #]KKKKKKKKKN, `0KKKKKKKKK" ,#KKKKKKKKKN   ,AC   1%        '
+echo '      /*p  M L ] ]  M]KKKK ?9KKKKN  YKKKKKKM  #KKKKRF 9KKKN -^   y /   "m""*  '
+echo ' " `wz` ] ]  E $ !  M]KKKR    YKKKKW `BKKB^ aKKKKMl   "KKKK9"""""]*""""Tp   M '
+echo '         bM  $ M  L L]KKK       "KKKKw YM zKKKR*       VKKN  "w /  `,,~` ""`  '
+echo '             ] L  M. ]KKH         `YKKKp,#KKMl         `KKN    "". -^\        '
+echo '              K   Nj ]KR             ?KKKKC             1KN  z` -^ *. `       '
+echo '                  ]] ]KH               `l                KN A,^      `~,y,,   '
+echo '                  ]M ]M                                  ]NB,,,,,,,,,,,i^   N '
+echo '                     ]L                                   N             %,,m` '
+echo '                     f                                    T                   '
+echo ''
+echo "The all-powerful Lord Mantis says '$HOWDY, $USER! This is my computer now!'"
+
+%labels
+    Author 'Eleanor Coyle'
+    Summary 'Example container for interactive fun times'
+
+%help
+    Example Arch Linux container that includes a number of command line games
+    and other fun stuff:
+    * neofetch :: Prove that you run Arch, btw
+    * cmatrix :: Pretend you are in the matrix
+    * fortune-mod :: Fortune teller
+    * cowfortune :: Cow fortune teller
+    * ltris :: Tetris clone
+    * asciiquarium :: Animated ASCII aquarium
+    * gnugo :: Play Go against the computer
+    * curseofwar :: RTS/action game 
+    * nethack :: Dungeon exploration game
+    * angband :: Dungeon exploration game based on JRR Tolkien's works
+
